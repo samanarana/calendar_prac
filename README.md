@@ -221,7 +221,7 @@ specification.
 
 | Column name    | Column type  | Constraints |
 |----------------|--------------|-------------|
-| id             | SERIAL       | Primary Key |
+| id             | INTEGER      | Primary Key |
 | name           | VARCHAR(200) | Not Null    |
 | start_datetime | TIMESTAMP    | Not Null    |
 | end_datetime   | TIMESTAMP    | Not Null    |
