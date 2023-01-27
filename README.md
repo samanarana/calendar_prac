@@ -25,14 +25,13 @@ you become a full-time software engineer.
 Create a new project directory called `calendar_this`. Change your working
 directory into `calendar_this` and run the following command to initialize your
 Python virtual environment and install needed dependencies all in one command.
-You'll use Python 3.9.6 because that version is supported on both macOS and
-Windows. It will install Flask, SQLite3, Flask-WTF, and Flask-Login. Installing
+It will install Flask, SQLite3, Flask-WTF, and Flask-Login. Installing
 Flask also installs Jinja2 for you. Installing Flask-WTF also installs WTForms
 for you. Flask-Login installs ... just Flask-Login. :-D Then, `python-dotenv`
 allows Flask to load your `.env` and `.flaskenv`.
 
 ```shell
-pipenv install Flask Flask-WTF python-dotenv --python 3.9.6
+pipenv install Flask Flask-WTF python-dotenv
 ```
 
 Once it installs, activate the virtual environment.
