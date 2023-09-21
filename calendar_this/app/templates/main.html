@@ -4,6 +4,46 @@
         <title>Calendar App</title>
     </head>
     <body>
-        <h1>Calendar working</h1>
+
+        <form method="post" action="{{ url_for('main.main') }}">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.name.label }}: {{ form.name() }}
+            </div>
+            <div>
+                {{ form.start_date.label }}: {{ form.start_date() }}
+            </div>
+            <div>
+                {{ form.end_date.label }}: {{ form.end_date() }}
+            </div>
+            <div>
+                {{ form.description.label }}: {{ form.description() }}
+            </div>
+            <div>
+                {{ form.private.label }}: {{ form.private() }}
+            </div>
+            <div>
+                {{ form.submit() }}
+            </div>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Start</th>
+                    <th>End</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2].strftime("%H:%M") }}</td>
+                    <td>{{ row[3].strftime("%H:%M") }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </body>
 </html>
